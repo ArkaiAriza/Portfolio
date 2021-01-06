@@ -5,13 +5,12 @@ import PortfolioSection from './PortfolioSection';
 
 import InteractiveArrow from './InteractiveArrow';
 import NameSubSection from './NameSubsection';
+import IMG from '../assets/full2.jpg';
 
 const optionsRight = [
   { label: 'MY PORTFOLIO', href: '#my-portfolio' },
   { label: 'MY RESUME', href: '#my-resume' },
 ];
-
-const IMG = 'https://static1.bigstockphoto.com/8/1/5/large1500/5180610.jpg';
 
 const Container = styled.div`
   position: absolute;

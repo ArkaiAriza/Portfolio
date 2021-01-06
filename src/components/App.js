@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import Modal from './Modal';
 import Left from './Left';
 import Right from './Right';
+import Footer from './Footer';
 
 import { GeneralOptionsProvider } from '../context/GeneralOptionsContext';
 
@@ -45,6 +46,7 @@ const App = () => {
           setSection={setSection}
           hover={hover}
         />
+        <Footer />
       </Container>
     </GeneralOptionsProvider>
   );

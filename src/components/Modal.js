@@ -100,6 +100,7 @@ const Button = styled.div`
 
   background-color: #000;
   border: solid 1px #111;
+  cursor: pointer;
 `;
 
 const Modal = () => {
@@ -138,24 +139,16 @@ const Modal = () => {
           <h1>{selectedProject.name}</h1>
           <p>{selectedProject.description}</p>
           <SocialContainer>
-            <Button>
-              <a
-                href={selectedProject.liveUrl}
-                target='_blank'
-                rel='noreferrer'
-              >
-                Live Demo
-              </a>
-            </Button>
-            <Button>
-              <a
-                href={selectedProject.githubUrl}
-                target='_blank'
-                rel='noreferrer'
-              >
-                Github
-              </a>
-            </Button>
+            <a href={selectedProject.liveUrl} target='_blank' rel='noreferrer'>
+              <Button>Live Demo</Button>
+            </a>
+            <a
+              href={selectedProject.githubUrl}
+              target='_blank'
+              rel='noreferrer'
+            >
+              <Button>Github</Button>
+            </a>
           </SocialContainer>
         </TextContainer>
       </Content>

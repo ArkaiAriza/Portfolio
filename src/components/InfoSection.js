@@ -6,7 +6,7 @@ import SocialButton from './SocialButton';
 
 import github from '../assets/github.png';
 import aws from '../assets/aws.png';
-const IMG = 'http://demo.2webros.com/myvitae/img/profilepic.png';
+import IMG from '../assets/portrait2.jpg';
 
 const skillsInfo = [
   {
@@ -263,11 +263,18 @@ const InfoSection = ({ section }) => {
                 and face interesting challenges, and I am willing to learn and
                 adapt to different situations.
               </p>
-              <Button>
-                <h6 style={{ margin: 0, zIndex: 3, position: 'absolute' }}>
-                  DOWNLOAD RESUME
-                </h6>
-              </Button>
+              <a
+                href='https://drive.google.com/file/d/18yv9xBW0UNBk-DXzeSrF5XOWRJxn9UoW/view?usp=sharing'
+                target='_blank'
+                rel='noreferrer'
+                style={{ alignSelf: 'flex-end' }}
+              >
+                <Button>
+                  <h6 style={{ margin: 0, zIndex: 3, position: 'absolute' }}>
+                    DOWNLOAD RESUME
+                  </h6>
+                </Button>
+              </a>
             </InfoText>
             <Image src={IMG} />
           </SecondaryContainer>
