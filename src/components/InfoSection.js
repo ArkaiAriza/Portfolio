@@ -4,10 +4,6 @@ import styled from 'styled-components'
 import SkillCard from './SkillCard'
 import SocialButton from './SocialButton'
 
-import github from '../assets/github.png'
-import aws from '../assets/aws.png'
-import IMG from '../assets/portrait2 - Copy.png'
-
 const skillsInfo = [
   {
     title: 'HTML',
@@ -62,7 +58,8 @@ const skillsInfo = [
   },
   {
     title: 'AWS',
-    img: aws,
+    img:
+      'https://drive.google.com/uc?export=view&id=1WM_r90dRIrfHfkdJavVi8hxDkaS_-8Jb',
   },
 ]
 
@@ -73,7 +70,8 @@ const socialInfo = [
   },
   {
     link: 'https://github.com/ArkaiAriza',
-    img: github,
+    img:
+      'https://drive.google.com/uc?export=view&id=1IkQMckGfjUoKhkKdxp1S4zxT_veTg6Hc',
   },
 ]
 
@@ -280,7 +278,11 @@ const InfoSection = ({ section }) => {
                 </Button>
               </a>
             </InfoText>
-            <Image src={IMG} />
+            <Image
+              src={
+                'https://drive.google.com/uc?export=view&id=1koFnDkZbAjvowcLh1IYANvfiJVOKInu_'
+              }
+            />
           </SecondaryContainer>
         </Info>
         <MySkills id="my-skills">

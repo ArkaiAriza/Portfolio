@@ -1,7 +1,7 @@
-import React, { useContext, useRef, useEffect } from 'react';
-import styled from 'styled-components';
+import React, { useContext, useRef, useEffect } from 'react'
+import styled from 'styled-components'
 
-import GeneralOptionsContext from '../context/GeneralOptionsContext';
+import GeneralOptionsContext from '../context/GeneralOptionsContext'
 
 const Container = styled.div`
   position: absolute;
@@ -15,7 +15,7 @@ const Container = styled.div`
   color: white;
   z-index: 1000;
   overflow-y: auto;
-`;
+`
 
 const Content = styled.div`
   position: relative;
@@ -35,7 +35,7 @@ const Content = styled.div`
   &::-webkit-scrollbar {
     width: 0px;
   }
-`;
+`
 
 const Image = styled.img`
   position: absolute;
@@ -45,7 +45,7 @@ const Image = styled.img`
   color: white;
   object-fit: contain;
   object-position: top center;
-`;
+`
 
 const Cover = styled.div`
   position: absolute;
@@ -54,7 +54,7 @@ const Cover = styled.div`
   height: 100%;
   width: 100%;
   background-color: #000c;
-`;
+`
 
 const TextContainer = styled.div`
   position: relative;
@@ -74,7 +74,7 @@ const TextContainer = styled.div`
   &::-webkit-scrollbar {
     width: 0px;
   }
-`;
+`
 
 const SocialContainer = styled.div`
   position: relative;
@@ -85,7 +85,7 @@ const SocialContainer = styled.div`
   justify-content: space-around;
   box-sizing: border-box;
   font-size: 18px;
-`;
+`
 
 const Button = styled.div`
   position: relative;
@@ -101,34 +101,34 @@ const Button = styled.div`
   background-color: #000;
   border: solid 1px #111;
   cursor: pointer;
-`;
+`
 
 const Modal = () => {
-  const { selectedProject, setProject } = useContext(GeneralOptionsContext);
-  const ref = useRef();
+  const { selectedProject, setProject } = useContext(GeneralOptionsContext)
+  const ref = useRef()
 
   useEffect(() => {
     const onClick = (event) => {
       if (ref.current && !ref.current.contains(event.target)) {
-        console.log(selectedProject.name);
+        console.log(selectedProject.name)
 
         if (selectedProject.name) {
-          console.log('ads');
+          console.log('ads')
 
-          setProject({});
+          setProject({})
         }
       }
-    };
+    }
 
-    document.body.addEventListener('click', onClick);
+    document.body.addEventListener('click', onClick)
 
     return () => {
-      document.body.removeEventListener('click', onClick);
-    };
-  }, [selectedProject]);
+      document.body.removeEventListener('click', onClick)
+    }
+  }, [selectedProject, setProject])
 
   if (!selectedProject.name) {
-    return null;
+    return null
   }
   return (
     <Container>
@@ -139,13 +139,13 @@ const Modal = () => {
           <h1>{selectedProject.name}</h1>
           <p>{selectedProject.description}</p>
           <SocialContainer>
-            <a href={selectedProject.liveUrl} target='_blank' rel='noreferrer'>
+            <a href={selectedProject.liveUrl} target="_blank" rel="noreferrer">
               <Button>Live Demo</Button>
             </a>
             <a
               href={selectedProject.githubUrl}
-              target='_blank'
-              rel='noreferrer'
+              target="_blank"
+              rel="noreferrer"
             >
               <Button>Github</Button>
             </a>
@@ -153,7 +153,7 @@ const Modal = () => {
         </TextContainer>
       </Content>
     </Container>
-  );
-};
+  )
+}
 
-export default Modal;
+export default Modal

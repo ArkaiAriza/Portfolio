@@ -3,11 +3,6 @@ import styled from 'styled-components'
 
 import ProjectCard from './ProjectCard'
 
-import movies from '../assets/movies.png'
-import news from '../assets/news.png'
-import podcasts from '../assets/podcasts.png'
-import agrotransporte from '../assets/agrotransporte.png'
-
 import GeneralOptionsContext from '../context/GeneralOptionsContext'
 
 const educationInfo = [
@@ -42,7 +37,8 @@ const projectInfo = [
     name: 'Movies Demo',
     description:
       'In this project we use the API of themoviedb. On this page you will find a list of movies, each movie has information and you can click on it to see even more about it. The main features of this page are the movie grid, the info animations, the info modal, the pagination, the movie search, the genre filter and the menu.',
-    img: movies,
+    img:
+      'https://drive.google.com/uc?export=view&id=1vVp0mHp0--KSMNOp1lipbR0Nv704P6-2',
     liveUrl: 'https://movieinfodemo.vercel.app/',
     githubUrl: 'https://github.com/ArkaiAriza/MoviesPortafolio',
   },
@@ -50,7 +46,7 @@ const projectInfo = [
     name: 'News Demo',
     description:
       'In this project we use the GNews API. In this page we find a series of news, each news redirects to its page of origin. The main features of this page are the news layout, the news carousel, the dark/normal mode, the search and advanced news search, the filter by type, the filter by country, and the menu.',
-    img: news,
+    img: 'https://drive.google.com/uc?id=10vjmZb_FJ6PtNU1zvXWfz5OoxGGcZaG-',
     liveUrl: 'https://newsdemo.vercel.app/',
     githubUrl: 'https://github.com/ArkaiAriza/NewsPortafolio',
   },
@@ -58,7 +54,8 @@ const projectInfo = [
     name: 'Podcasts Demo',
     description:
       'In this project we use the listennotes API. On this page you will find a variety of podcasts, each with its own series of episodes that can be played. The main features of this page are the podcast grid, the episode list by podcast, the audio player, the infinite scroll, the podcast and episode search, and the genre filter.',
-    img: podcasts,
+    img:
+      'https://drive.google.com/uc?export=view&id=1Nen1003rVeQJwq7AO4N-vnaNEKQ1pYtN',
     liveUrl: 'https://podcastdemo.macastro9714.vercel.app/',
     githubUrl: 'https://github.com/ArkaiAriza/PodcastPortafolio',
   },
@@ -66,7 +63,8 @@ const projectInfo = [
     name: 'Agro Transporte',
     description:
       'Agrotransporte is a mobile app that seeks to connect agricultors and independent transporters. The app was made with ReactNative, while the backend uses ExpressJS and a MongoDB database. It includes google sing up, stripe payments and basic CRUD operations.',
-    img: agrotransporte,
+    img:
+      'https://drive.google.com/uc?export=view&id=1hUEI8l_UJplas9PojRauw--joHdUx5oT',
     liveUrl: 'https://expo.io/artifacts/594359c3-bfed-4e06-bcd7-a97bb3efd4d2',
     githubUrl: 'https://github.com/ArkaiAriza/AgroTransporte',
   },
@@ -118,16 +116,6 @@ const SecondaryContainer = styled.div`
 
   box-sizing: border-box;
   font-size: 32px;
-`
-
-const Image = styled.img`
-  box-sizing: border-box;
-  margin: 10px 0 50px 0;
-  width: 300px;
-
-  align-self: flex-start;
-  flex: 0 0 20%;
-  object-fit: contain;
 `
 
 const MyResume = styled.div`

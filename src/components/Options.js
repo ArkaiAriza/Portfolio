@@ -1,5 +1,5 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
 const TextGroup = styled.div`
   display: flex;
@@ -7,21 +7,21 @@ const TextGroup = styled.div`
   align-items: center;
   color: white;
   transition: 0.5s;
-`;
+`
 
 const Option = styled.div`
   display: flex;
   color: white;
   font-size: 1.3vw;
   margin: 10% 0;
-`;
+`
 
 const Divider = styled.div`
   height: 1px;
   width: 80%;
   background-color: white;
   margin: 10% 0;
-`;
+`
 
 const Options = ({ style, options }) => {
   const renderOptions = () => {
@@ -34,11 +34,11 @@ const Options = ({ style, options }) => {
           {index !== options.length - 1}
           <Divider />
         </>
-      );
-    });
-  };
+      )
+    })
+  }
 
-  return <TextGroup style={style}>{renderOptions()}</TextGroup>;
-};
+  return <TextGroup style={style}>{renderOptions()}</TextGroup>
+}
 
-export default Options;
+export default Options

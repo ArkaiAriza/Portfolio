@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-import styled, { css } from 'styled-components';
-
-import img from '../assets/github.png';
+import React, { useState } from 'react'
+import styled, { css } from 'styled-components'
 
 const Container = styled.div`
   position: absolute;
@@ -27,13 +25,13 @@ const Container = styled.div`
         `
       : ''}
   transition: 0.5s;
-`;
+`
 
 const Text = styled.p`
   flex: 0 0 30%;
   min-width: 200px;
   text-align: center;
-`;
+`
 
 const Arrow = styled.div`
   position: absolute;
@@ -54,7 +52,7 @@ const Arrow = styled.div`
   z-index: 3;
   opacity: 1;
   cursor: pointer;
-`;
+`
 
 const Button = styled.div`
   position: relative;
@@ -67,16 +65,7 @@ const Button = styled.div`
   align-items: center;
   font-size: 32px;
   cursor: pointer;
-`;
-
-const Image = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  height: 100%;
-  width: 100%;
-`;
+`
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -84,24 +73,24 @@ const ButtonContainer = styled.div`
   flex: 0 0 30%;
   min-width: 200px;
   text-align: center;
-`;
+`
 
 const Footer = () => {
-  const [showFooter, setShowFooter] = useState(false);
+  const [showFooter, setShowFooter] = useState(false)
 
   return (
     <Container showFooter={showFooter}>
       <Arrow onClick={() => setShowFooter(!showFooter)}>
-        <i className='material-icons md-24'>
+        <i className="material-icons md-24">
           {showFooter ? 'arrow_downward' : 'arrow_upward'}
         </i>
       </Arrow>
       <Text>
         I developed these projects together with my friend{' '}
         <a
-          href='https://resumewebpage.macastro9714.vercel.app/'
-          target='_blank'
-          rel='noreferrer'
+          href="https://resumewebpage.macastro9714.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
           style={{ color: '#0a6', fontWeight: 'bold' }}
         >
           Miguel Angel Castro
@@ -114,18 +103,18 @@ const Footer = () => {
         functionalities. We create diagrams in the initial stages of the design
         of each project{' '}
         <a
-          href='https://drive.google.com/drive/folders/1jY_yZw6WQ35OKyDBEzSPXxVwzibdgEBC'
-          target='_blank'
-          rel='noreferrer'
+          href="https://drive.google.com/drive/folders/1jY_yZw6WQ35OKyDBEzSPXxVwzibdgEBC"
+          target="_blank"
+          rel="noreferrer"
           style={{ color: '#0a6', fontWeight: 'bold' }}
         >
           (you can check them here)
         </a>
         . Also,{' '}
         <a
-          href='https://github.com/ArkaiAriza?tab=repositories'
-          target='_blank'
-          rel='noreferrer'
+          href="https://github.com/ArkaiAriza?tab=repositories"
+          target="_blank"
+          rel="noreferrer"
           style={{ color: '#0a6', fontWeight: 'bold' }}
         >
           (here)
@@ -135,8 +124,8 @@ const Footer = () => {
       <ButtonContainer>
         <a
           href={'https://github.com/ArkaiAriza/Portfolio/tree/master'}
-          target='_blank'
-          rel='noreferrer'
+          target="_blank"
+          rel="noreferrer"
         >
           <Button>
             <div>GitHub</div>
@@ -144,7 +133,7 @@ const Footer = () => {
         </a>
       </ButtonContainer>
     </Container>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
