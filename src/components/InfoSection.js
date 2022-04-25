@@ -1,12 +1,12 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
-import SkillCard from './SkillCard';
-import SocialButton from './SocialButton';
+import SkillCard from './SkillCard'
+import SocialButton from './SocialButton'
 
-import github from '../assets/github.png';
-import aws from '../assets/aws.png';
-import IMG from '../assets/portrait2.jpg';
+import github from '../assets/github.png'
+import aws from '../assets/aws.png'
+import IMG from '../assets/portrait2 - Copy.png'
 
 const skillsInfo = [
   {
@@ -64,7 +64,7 @@ const skillsInfo = [
     title: 'AWS',
     img: aws,
   },
-];
+]
 
 const socialInfo = [
   {
@@ -75,7 +75,7 @@ const socialInfo = [
     link: 'https://github.com/ArkaiAriza',
     img: github,
   },
-];
+]
 
 const Container = styled.div`
   height: 100%;
@@ -89,7 +89,7 @@ const Container = styled.div`
   &::-webkit-scrollbar {
     width: 0px;
   }
-`;
+`
 
 const InnerContainer = styled.div`
   width: 100%;
@@ -97,60 +97,63 @@ const InnerContainer = styled.div`
   flex-direction: column;
   box-sizing: border-box;
   padding: 7% 10% 15% 10%;
-`;
+`
 
 const Info = styled.div`
   width: 100%;
-  height: fit-content;
   display: flex;
   flex-flow: column nowrap;
-
   box-sizing: border-box;
   font-size: 32px;
-`;
+`
 
 const MainText = styled.h1`
   margin: 0 0 1em 0;
   box-sizing: border-box;
   text-align: right;
-  flex: 1 0 100%;
-`;
+`
 
 const SecondaryContainer = styled.div`
   width: 100%;
-  height: fit-content;
   display: flex;
-  flex-flow: row wrap-reverse;
-  justify-content: space-around;
-
+  flex-flow: row;
+  gap: 30px;
   box-sizing: border-box;
   font-size: 32px;
-`;
+  justify-content: end;
+  @media (max-width: 1440px) {
+    flex-direction: column-reverse;
+  }
+`
 
-const InfoText = styled.h5`
+const InfoText = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 0 5px 0 0;
-
+  gap: 30px;
   text-align: right;
-  flex: 0 0 70%;
+  max-width: 60%;
   font-weight: 300;
-
-  & p {
-    margin: 0 0 30px 0;
+  @media (max-width: 1440px) {
+    max-width: 100%;
   }
-`;
+  & p {
+    margin: 0px;
+  }
+`
 
 const Image = styled.img`
   box-sizing: border-box;
-  margin: 10px 0 50px 0;
   width: 300px;
-
-  align-self: end;
-  flex: 0 0 20%;
+  align-self: start;
+  min-width: 20%;
   object-fit: contain;
-`;
+  margin-top: 10px;
+  @media (max-width: 1440px) {
+    margin-top: 0px;
+    align-self: end;
+  }
+`
 
 const Button = styled.div`
   position: relative;
@@ -181,7 +184,7 @@ const Button = styled.div`
 
     transition: 0.4s;
   }
-`;
+`
 
 const MySkills = styled.div`
   width: 100%;
@@ -189,12 +192,15 @@ const MySkills = styled.div`
   margin: 50px 0 0 0;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
-
+  justify-content: space-between;
+  row-gap: 100px;
   box-sizing: border-box;
   font-size: 32px;
   text-align: right;
-`;
+  @media (max-width: 940px) {
+    justify-content: center;
+  }
+`
 
 const ContactSection = styled.div`
   width: 100%;
@@ -212,7 +218,7 @@ const ContactSection = styled.div`
     margin: 5px;
     font-weight: 300;
   }
-`;
+`
 
 const SocialContainer = styled.div`
   align-self: flex-end;
@@ -224,25 +230,25 @@ const SocialContainer = styled.div`
   box-sizing: border-box;
   font-size: 32px;
   text-align: right;
-`;
+`
 
 const InfoSection = ({ section }) => {
   const renderSkills = () => {
     return skillsInfo.map((skill) => {
-      return <SkillCard title={skill.title} img={skill.img} />;
-    });
-  };
+      return <SkillCard title={skill.title} img={skill.img} />
+    })
+  }
 
   const renderSocials = () => {
     return socialInfo.map((social) => {
-      return <SocialButton img={social.img} link={social.link} />;
-    });
-  };
+      return <SocialButton img={social.img} link={social.link} />
+    })
+  }
 
   return (
     <Container>
       <InnerContainer>
-        <Info id='about-me'>
+        <Info id="about-me">
           <MainText>Hello, My Name is Arkai</MainText>
           <SecondaryContainer>
             <InfoText>
@@ -264,27 +270,25 @@ const InfoSection = ({ section }) => {
                 adapt to different situations.
               </p>
               <a
-                href='https://drive.google.com/file/d/18yv9xBW0UNBk-DXzeSrF5XOWRJxn9UoW/view?usp=sharing'
-                target='_blank'
-                rel='noreferrer'
+                href="https://drive.google.com/file/d/18yv9xBW0UNBk-DXzeSrF5XOWRJxn9UoW/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
                 style={{ alignSelf: 'flex-end' }}
               >
                 <Button>
-                  <h6 style={{ margin: 0, zIndex: 3, position: 'absolute' }}>
-                    DOWNLOAD RESUME
-                  </h6>
+                  <h6 style={{ margin: 0, zIndex: 3 }}>DOWNLOAD RESUME</h6>
                 </Button>
               </a>
             </InfoText>
             <Image src={IMG} />
           </SecondaryContainer>
         </Info>
-        <MySkills id='my-skills'>
-          <h1 style={{ flex: '1 0 100%' }}>My Skills</h1>
+        <MySkills id="my-skills">
+          <h1 style={{ width: '100%', marginBottom: 0 }}>My Skills</h1>
           {renderSkills()}
         </MySkills>
-        <ContactSection id='contact'>
-          <h1 style={{ flex: '1 0 100%' }}>Contact Me</h1>
+        <ContactSection id="contact">
+          <h1>Contact Me</h1>
           <p
             style={{
               fontWeight: 'bold',
@@ -301,7 +305,7 @@ const InfoSection = ({ section }) => {
         </ContactSection>
       </InnerContainer>
     </Container>
-  );
-};
+  )
+}
 
-export default InfoSection;
+export default InfoSection
