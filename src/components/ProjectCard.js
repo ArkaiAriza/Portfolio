@@ -1,5 +1,5 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
 const Container = styled.div`
   position: relative;
@@ -31,7 +31,7 @@ const Container = styled.div`
     }
   }
   cursor: pointer;
-`;
+`
 
 const InnerContainer = styled.div`
   position: relative;
@@ -42,7 +42,7 @@ const InnerContainer = styled.div`
   flex-direction: column;
   transition: 0.4s;
   overflow: hidden;
-`;
+`
 
 const Title = styled.h3`
   position: absolute;
@@ -51,14 +51,14 @@ const Title = styled.h3`
   margin: 0;
   opacity: 0;
   transition: 0.4s;
-`;
+`
 
 const Image = styled.img`
   box-sizing: border-box;
   height: 100%;
   width: 100%;
   object-fit: cover;
-`;
+`
 
 const Cover = styled.div`
   position: absolute;
@@ -73,7 +73,7 @@ const Cover = styled.div`
   &:hover {
     opacity: 1;
   }
-`;
+`
 
 const Reflect = styled.div`
   position: absolute;
@@ -87,19 +87,19 @@ const Reflect = styled.div`
 
   transform: skew(0deg, 40deg);
   transition: 0.5s;
-`;
+`
 
 const ProjectCard = ({ project, setProject }) => {
   return (
     <Container onClick={() => setProject(project)}>
-      <InnerContainer className='inner'>
+      <InnerContainer className="inner">
         <Image src={project.img} />
         <Cover />
-        <Reflect className='reflect' />
-        <Title className='title'>{project.name}</Title>
+        <Reflect className="reflect" />
+        <Title className="title">{project.name}</Title>
       </InnerContainer>
     </Container>
-  );
-};
+  )
+}
 
-export default ProjectCard;
+export default ProjectCard

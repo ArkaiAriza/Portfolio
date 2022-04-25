@@ -1,16 +1,15 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
+import React from 'react'
+import styled, { css } from 'styled-components'
 
-import PortfolioSection from './PortfolioSection';
+import PortfolioSection from './PortfolioSection'
 
-import InteractiveArrow from './InteractiveArrow';
-import NameSubSection from './NameSubsection';
-import IMG from '../assets/full2.jpg';
+import InteractiveArrow from './InteractiveArrow'
+import NameSubSection from './NameSubsection'
 
 const optionsRight = [
   { label: 'MY PORTFOLIO', href: '#my-portfolio' },
   { label: 'MY RESUME', href: '#my-resume' },
-];
+]
 
 const Container = styled.div`
   position: absolute;
@@ -34,7 +33,7 @@ const Container = styled.div`
           transform: translateX(61.5%);
         `
       : ''}
-`;
+`
 
 const ImageSection = styled.div`
   position: relative;
@@ -43,13 +42,14 @@ const ImageSection = styled.div`
   width: 50%;
   overflow: hidden;
   cursor: pointer;
-`;
+`
 
 const Image = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
-  background: url(${IMG}) no-repeat center top;
+  background: url('https://drive.google.com/uc?export=view&id=1Iml7TSsS2Q-V076In4okrHSOxsUduq1H')
+    no-repeat center top;
   background-size: cover;
 
   ${(props) =>
@@ -59,7 +59,7 @@ const Image = styled.div`
         `
       : ''}
   transition: 1s;
-`;
+`
 
 const Cover = styled.div`
   position: absolute;
@@ -78,7 +78,7 @@ const Cover = styled.div`
         `
       : ''}
   transition: z-index 0s, opacity 1s;
-`;
+`
 
 const Right = ({ section, setHover, setSection, hover }) => {
   return (
@@ -90,14 +90,14 @@ const Right = ({ section, setHover, setSection, hover }) => {
     >
       <ImageSection section={section}>
         <InteractiveArrow direction={'right'} hover={hover} section={section}>
-          <i className='material-icons md-24'>arrow_forward</i>
+          <i className="material-icons md-24">arrow_forward</i>
           <div>PORTFOLIO</div>
         </InteractiveArrow>
         <NameSubSection
           section={section}
           baseSection={'right'}
           icon={'keyboard_arrow_left'}
-          iconClass='material-icons md-light md-ad'
+          iconClass="material-icons md-light md-ad"
           options={optionsRight}
           setSection={setSection}
         />
@@ -107,7 +107,7 @@ const Right = ({ section, setHover, setSection, hover }) => {
       </ImageSection>
       <PortfolioSection section={section}></PortfolioSection>
     </Container>
-  );
-};
+  )
+}
 
-export default Right;
+export default Right
